@@ -135,9 +135,14 @@ h1 {
     font-size: 1.8em;
 }
 
+@media (min-width: 800px) {
+  .section {
+    max-width: 1140px;
+    margin: auto;
+  }
 
-
-
+  
+}
 
 
 .clipboard-logo {
@@ -152,8 +157,16 @@ h1 {
 .wide-section {
   display: flex;
   flex-wrap: wrap;
-  text-align: center;
+  position: relative;
+  margin: auto;
 }
+
+.wide-section__text {
+  text-align: center;
+  margin: auto;
+  
+}
+
 
 .section__image {
   margin: auto;
@@ -163,13 +176,14 @@ h1 {
 /* section with feature cards */
 
 .feature-cards {
+  max-width: 1140px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .feature {
   margin: auto;
-  max-width: 400px;
+  max-width: 300px;
   flex 1;
 }
 
@@ -186,6 +200,17 @@ h1 {
     display: block;
 }
 
+@media (min-width:800) {
+  .social-proof {
+    display: flex;
+    gap: 2em;
+  }
+
+  .social-proof__logo {
+    display: inline;
+  }
+}
+
 
 /* footer with navbar */
 
@@ -194,6 +219,9 @@ h1 {
   flex-wrap: wrap;
   gap: 2em;
   align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  
 }
 
 .footer-logo {
@@ -210,6 +238,7 @@ h1 {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  
   gap: 1.5em;
   padding-left: 0;
 }
@@ -222,6 +251,16 @@ h1 {
   color: var(--clr-dark-800);
 }
 
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  width: 95vw;
+}
+.fa-brands {
+  font-size: 2em;
+}
 
 /* attribution in the footer */
 
