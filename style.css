@@ -77,6 +77,17 @@ body {
     background-repeat: no-repeat;
 }
 
+h1, h2, h3 {
+  text-align: center;
+  font-weight: var(--fw-semibold);
+}
+
+p {
+  margin: 2em 0;
+  text-align: center;
+  
+}
+
 .button-group {
     display: flex;
     flex-wrap: wrap;
@@ -120,19 +131,14 @@ header {
 }
 
 h1 {
-    text-align: center;
-    font-weight: var(--fw-semibold);
+    
     font-size: 1.8em;
 }
 
-header > p {
-    text-align: center;
-}
 
-p {
-    margin: 2em 0;
-    
-}
+
+
+
 
 .clipboard-logo {
     margin: 3em auto;
@@ -141,7 +147,36 @@ p {
     
 }
 
+/* wide section */
 
+.wide-section {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.section__image {
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+/* section with feature cards */
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature {
+  margin: auto;
+  max-width: 400px;
+  flex 1;
+}
+
+.feature-icon {
+  margin: auto;
+  margin-bottom: 2em;
+}
 
 /* social proof */
 
@@ -149,6 +184,40 @@ p {
 .social-proof__logo {
     margin: 2em auto;
     display: block;
+}
+
+
+/* footer with navbar */
+
+.navbar-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 100%;
+}
+
+.clipboard-logo-small {
+  width: 5em;
+  margin: auto;
+}
+
+.nav {
+  list-style-type: none;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  padding-left: 0;
+}
+
+.nav-link {
+  text-align: center;
+  width: 10em;
+  display: block;
 }
 
 /* attribution in the footer */
