@@ -218,6 +218,8 @@ h1 {
   text-align: center;
   width: 10em;
   display: block;
+  text-decoration: none;
+  color: var(--clr-dark-800);
 }
 
 /* attribution in the footer */
