@@ -45,8 +45,8 @@
         </p>
       </div>
       <div class="flex-wrapper-wide">
-        <img class="section__image" src="./images/image-computer.png" alt="A Mac computer with a green check mark on the screen">
-        <div class="features-list">
+        <div class="shrinky"><img class="section__image" id="no-left-margin" src="./images/image-computer.png" alt="A Mac computer with a green check mark on the screen"></div>
+        <div class="features-list shrinky">
           <h3>Quick Search</h3>
           <p>Easily search your snippets by content, category, web address, application, and more.</p>
           <h3>iCloud Sync</h3>
@@ -63,7 +63,7 @@
         Whether you’re on the go, or at your computer, you can access all your Clipboard
         snippets in a few simple clicks.
       </p>
-      <img class="section__image" src="./images/image-devices.png" alt="An iPad and an iPhone, both screens showing green check marks">
+      <div class="shrinky"><img class="section__image" src="./images/image-devices.png" alt="An iPad and an iPhone, both screens showing green check marks"></div>
     </section>
 
     <section>
@@ -94,7 +94,7 @@
       <img src="./images/logo-hp.png" alt="Hewlett Packard Enterprise logo" class="social-proof__logo">
       <img src="./images/logo-vector-graphics.png" alt="Vector Graphics logo" class="social-proof__logo">
     </section>
-    <section>
+    <section class="narrow-section">
       <h2>Clipboard for iOS and Mac OS</h2>
       <p>
         Available for free on the App Store. Download for Mac or iOS, sync with iCloud
@@ -107,21 +107,27 @@
     </section>
 
   
-  <nav class="navbar-footer">
+  <div class="navbar-footer">
       <div class="footer-logo"><img src="./images/logo.svg" alt="A small Clipboard logo, showing the letter C in a circle" class="clipboard-logo-small"></div>
-      <ul class="nav">
-        <li><a class="nav-link" href="#">FAQs</a></li>
-        <li><a class="nav-link" href="#">Contact Us</a></li>
-        <li><a class="nav-link" href="#">Privacy Policy</a></li>
-        <li><a class="nav-link" href="#">Press Kit</a></li>
-        <li><a class="nav-link" href="#">Install Guide</a></li>
-      </ul>
+     
+        <ul class="nav nav-left">
+          <li><a class="nav-link" href="#">FAQs</a></li>
+          <li><a class="nav-link" href="#">Contact Us</a></li>
+        </ul>
+        <ul class="nav nav-middle">
+          <li><a class="nav-link" href="#">Privacy Policy</a></li>
+          <li><a class="nav-link" href="#">Press Kit</a></li>
+        </ul>
+        <ul class="nav nav-right">
+          <li><a class="nav-link" href="#">Install Guide</a></li>
+        </ul>
+      
       <div class="social-icons">
         <i class="fa-brands fa-square-facebook"></i>
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-instagram"></i>
       </div>
-  </nav>
+    </div>
 
   </main>
 

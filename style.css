@@ -1,4 +1,4 @@
-/* Josh Comeau's reset
+/* Josh Comeau's reset */
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -75,6 +75,7 @@ body {
     background-image: url(./images/bg-header-mobile.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    margin: 0;
 }
 
 h1, h2, h3 {
@@ -83,7 +84,7 @@ h1, h2, h3 {
 }
 
 p {
-  margin: 2em 0;
+  margin: 2em auto;
   text-align: center;
   
 }
@@ -124,6 +125,43 @@ section {
     margin: 5em 1.5em;
 }
 
+.shrinky {
+  flex-shrink: 1;
+  flex: 1;
+  max-width: 1140px;
+  margin: auto;
+
+}
+
+
+
+@media (min-width: 600px) {
+  section {
+    margin: 5em 0;
+  }
+
+  #no-left-margin {
+    margin-left: 0;
+  }
+
+  .flex-wrapper-wide {
+    flex-wrap: nowrap;
+    justify-content: left;
+    flex-shrink: 1;
+  }
+
+  .section__image {
+    width: 100%;
+  }
+
+  .features-list {
+    margin-right: 10em;
+  }
+  }
+
+
+
+
 /* header */
 
 header {
@@ -135,13 +173,17 @@ h1 {
     font-size: 1.8em;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .section {
     max-width: 1140px;
     margin: auto;
   }
 
-  
+  .features-list > h3, .features-list > p {
+    text-align: left;
+  }
+
+
 }
 
 
@@ -152,25 +194,47 @@ h1 {
     
 }
 
+/* narrow section */
+
+.narrow-section {
+  max-width: 800px;
+  margin: 3em auto;
+ 
+}
+
 /* wide section */
 
 .wide-section {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
+   
   margin: auto;
 }
 
 .wide-section__text {
   text-align: center;
   margin: auto;
+  max-width: 1140px;
   
 }
 
+.flex-wrapper-wide {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  align-items: center;
+  margin-left: 0;
+}
 
 .section__image {
   margin: auto;
   margin-bottom: 3em;
+
+  
+}
+
+.section__image {
+  flex-shrink: 1;
+  
 }
 
 /* section with feature cards */
@@ -179,6 +243,7 @@ h1 {
   max-width: 1140px;
   display: flex;
   flex-wrap: wrap;
+  margin: auto;
 }
 
 .feature {
@@ -198,34 +263,49 @@ h1 {
 .social-proof__logo {
     margin: 2em auto;
     display: block;
+    height: max-content;
 }
 
-@media (min-width:800) {
+@media (min-width:800px) {
   .social-proof {
     display: flex;
-    gap: 2em;
+    justify-content: space-around;
   }
 
   .social-proof__logo {
-    display: inline;
+      margin: 0;    
   }
-}
+
+  .footer-logo {
+      max-width: 10em;
+      margin: 0;
+    }
+
+  .navbar-footer {
+    flex-wrap: nowrap;
+  }
+
+  .clipboard-logo-small {
+    width: 5em;
+    margin: 3em;
+  }
+  }
+
 
 
 /* footer with navbar */
 
 .navbar-footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2em;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3em;
+  display: grid;
   
 }
 
+
+
+
 .footer-logo {
   width: 100%;
+  margin: 1em auto;
 }
 
 .clipboard-logo-small {
@@ -235,13 +315,14 @@ h1 {
 
 .nav {
   list-style-type: none;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+
   
   gap: 1.5em;
   padding-left: 0;
 }
+
 
 .nav-link {
   text-align: center;
@@ -256,11 +337,60 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
-  width: 95vw;
+  width: 100%;
+  margin-top: 1em;
 }
 .fa-brands {
   font-size: 2em;
 }
+
+
+@media (min-width: 800px) {
+  body {
+    background-image: url(./images/bg-header-desktop.png);
+  }
+  
+  .navbar-footer {
+    grid-template-columns: repeat(6, 1fr);
+    align-items: start;
+    margin-left: 1.5em;
+  }
+
+
+  .nav {
+    text-align: left;
+    align-self: start;
+    margin-top: 1em;
+  }
+  
+  .nav-link {
+    text-align: left;
+  }
+
+  .footer-logo {
+    grid-column: 1;
+    margin: 0 auto;
+  }
+
+  .nav-left {
+    grid-column: 2;
+  }
+
+  .nav-middle {
+    grid-column: 3 ;
+  }
+  
+  .nav-right {
+    grid-column: 4;
+    
+  }
+
+  .social-icons {
+    width: 100%;
+    grid-column: 6 ;
+    align-self: center;
+    margin: 0.5em;
+  }
 
 /* attribution in the footer */
 
